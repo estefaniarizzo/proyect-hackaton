@@ -5,9 +5,9 @@ function Navbar() {
   return (
     <nav className="nav">
       <div className="nav-items">
-        <a href="#inicio">Inicio</a>
-        <a href="#acerca-de">Acerca de</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio">Home</a>
+        <a href="#acerca-de">About us</a>
+        <a href="#contacto">Contact</a>
       </div>
     </nav>
   );
