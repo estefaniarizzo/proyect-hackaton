@@ -2,14 +2,14 @@ import { useState } from 'react';
 import './PlanetCards.css';
 import styled from 'styled-components';
 import { Fade } from 'react-reveal';
-
 import fondo from '../assets/NGC-604.jpg';
 import carina from '../assets/Carina Nebula.jpg';
 import galaxy from '../assets/galaxy-m84.jpg';
 import stars from  '../assets/stars.jpg';
 import bubble from '../assets/bubbe.jpg';
 import orion from '../assets/orion.jpg';
-
+import leo from '../assets/leo.jpg';
+import stellar from '../assets/stellar.jpg';
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -83,14 +83,16 @@ const CardDescription = styled.p`
 function PlanetCards() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [fondo, carina, galaxy, stars, bubble, orion];
+  const images = [fondo, carina, galaxy, stars, bubble, orion, leo, stellar];
   const cardInfo = [
     { title: 'Region NGC 604', description: 'Star-forming region NGC 604' },
     { title: 'Carina Nebula', description: '“Cosmic Cliffs” in Carina Nebula' },
     { title: 'M81 Galaxy', description: 'Spiral galaxy known as Messier 81, or M81' },
     { title: 'A Star-Formation', description: 'Located around 10 million light-years away in the constellation of Canes Venatici' },
     { title: 'Star a Giant Bubble', description: 'Enormous bubble being blown into space by a super-hot, massive star' },
-    { title: 'Orion Nebula', description: 'Orion nebula, an intense star-forming region of gas and dust' }
+    { title: 'Orion Nebula', description: 'Orion nebula, an intense star-forming region of gas and dust' },
+    { title: 'Leo', description: 'A runaway star, called CW Leo, plowing through the depths of space and piling up interstellar material' },
+    { title: 'Stellar shrapnel', description: 'Several thousand years ago, a star some 160,000 light-years away from us exploded, scattering stellar shrapnel across the sky' }
   ];
 
   const openImage = (index) => {
@@ -124,7 +126,6 @@ function PlanetCards() {
             <CloseButton onClick={closeImage}>×</CloseButton>
             <ModalImage src={selectedImage.src} alt={selectedImage.title} />
             <h2>{selectedImage.title}</h2>
-            <p>{selectedImage.description}</p>
           </ModalContainer>
         </>
       )}
