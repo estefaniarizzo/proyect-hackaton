@@ -1,0 +1,36 @@
+/* Reset de margen y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el navbar */
+  .nav {
+    background-color: black;
+    color: white;
+    position: relative;
+    width: 100%; /* Ancho completo del navbar */
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: flex-end; 
+    height: 100%;
+    padding-right: 20px; 
+  }
+  
+  .nav-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Espacio entre los elementos */
+    line-height: 50px; /* Centra verticalmente el texto */
+    transition: background-color 0.3s ease;
+  }
+  
+
+  .nav-items a:hover {
+    background-color: rgba(122, 122, 122, 0.521);
+    width:auto; /* Cambia el color de fondo al pasar el ratón */
+  }  
