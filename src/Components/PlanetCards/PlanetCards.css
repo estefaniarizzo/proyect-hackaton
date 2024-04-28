@@ -1,12 +1,17 @@
 /* PlanetCards.css */
+
+/* Establecer el ancho máximo para evitar la barra de desplazamiento horizontal */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%; /* Evitar la barra de desplazamiento horizontal */
+    overflow-x: hidden; /* Ocultar el desplazamiento horizontal */
   }
   
+  /* Ajustar el ancho máximo de las tarjetas para un diseño más flexible */
   .card {
-    width: 300px;
+    width: calc(33.33% - 40px); /* Calcula el ancho para que quepan 3 tarjetas en una fila, con un margen entre ellas */
     margin: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -14,12 +19,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  /* Establecer estilos de imagen responsivos */
   .card-img {
     width: 100%;
-  height: 200px; 
-  object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
   }
   
+  /* Establecer márgenes y tamaños de fuente responsivos para el contenido de la tarjeta */
   .card-content {
     padding: 20px;
   }

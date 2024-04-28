@@ -1,15 +1,21 @@
-// NavBar.jsx
-import './NavBar.css'; // Importar archivo CSS
 
+import './NavBar.css'; // Importar archivo CSS
+import { Link } from 'react-router-dom';
 function Navbar() {
+  
+
   return (
-    <nav className="nav">
-      <div className="nav-items">
-        <a href="#inicio">Home</a>
-        <a href="#acerca-de">About us</a>
-        <a href="#contacto">Contact</a>
-      </div>
-    </nav>
+    <>
+      
+      {/* Menú de navegación */}
+      <nav className='nav'>
+        <div className="nav-items">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about-us" className="nav-link">About us</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+        </div>
+      </nav>
+    </>
   );
 }
 

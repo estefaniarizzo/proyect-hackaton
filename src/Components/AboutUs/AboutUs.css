@@ -1,0 +1,53 @@
+.about-container {
+   
+    padding: 50px 0; /* Espaciado interno */
+}
+
+.about-content {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar horizontalmente */
+    text-align: center; /* Alinear texto al centro */
+}
+.about-content h2 {
+    font-size: 35px;
+    color: violet;
+}
+.about-description {
+    display: flex; /* Mostrar en línea */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    margin-top: 30px; /* Espacio superior */
+}
+
+.about-description p {
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+    color: #ffffff; /* Color de texto */
+    width: 45%; /* Ancho del texto */
+}
+.about-features {
+    display: flex;
+    justify-content: space-between; /* Cambiado a space-between para agregar espacio entre las tarjetas */
+    margin-top: 50px;
+}
+
+.feature {
+    width: calc(30% - 20px); /* Reduciendo el ancho para dejar espacio entre las tarjetas */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px; /* Añadiendo espacio en la parte inferior de cada tarjeta */
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+
+/* Estilos para animaciones de React Reveal */
