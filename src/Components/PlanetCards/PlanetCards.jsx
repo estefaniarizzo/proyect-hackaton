@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './PlanetCards.css';
 import styled from 'styled-components';
 import { Fade } from 'react-reveal';
@@ -10,6 +10,8 @@ import bubble from '../assets/bubbe.jpg';
 import orion from '../assets/orion.jpg';
 import leo from '../assets/leo.jpg';
 import stellar from '../assets/stellar.jpg';
+import Loader from '../Loader/Loder'; // Importa el componente Loader
+
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -81,6 +83,19 @@ const CardDescription = styled.p`
 `;
 
 function PlanetCards() {
+  const [isLoading, setIsLoading] = useState(true); // Estado local para controlar la visibilidad del loader
+
+  useEffect(() => {
+      // Simula una carga asincrónica
+      const timer = setTimeout(() => {
+          setIsLoading(false); // Cambia el estado del loader a falso después de un tiempo de espera (simulando que la carga ha finalizado)
+      }, 6000);
+
+      // Limpia el temporizador al desmontar el componente
+      return () => clearTimeout(timer);
+  }, []); // Se ejecuta solo una vez al montar el componente
+
+
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [fondo, carina, galaxy, stars, bubble, orion, leo, stellar];
@@ -105,6 +120,7 @@ function PlanetCards() {
 
   return (
     <>
+    {isLoading && <Loader />}
       <Fade bottom cascade>
         <CardContainer>
           {images.map((image, index) => (

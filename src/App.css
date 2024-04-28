@@ -4,14 +4,21 @@ body {
   font-optical-sizing: auto;
   font-weight: 300px;
   font-style: normal;
-  background-image: linear-gradient(108deg, #220049 27%, #0d00ff 90%);
+  background-image: url('https://img.freepik.com/premium-photo/moon-stars-with-cloud-background_966328-231.jpg');
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen de fondo */
   margin: 0; /* Agrega esto para asegurarte de que no haya ningún margen predeterminado */
   padding: 0; /* Agrega esto para asegurarte de que no haya ningún relleno predeterminado */
   overflow-x: hidden; /* Esto ocultará cualquier desplazamiento horizontal */
+  animation: starsAnimation 20s linear infinite alternate; /* Agrega la animación a la imagen de fondo */
 }
 
-.container {
-  max-width: 100%; /* Establece el ancho máximo para que se adapte al ancho del viewport */
-  margin: 0 auto; /* Esto centrará tu contenido */
-  padding: 0 20px; /* Agrega algo de relleno opcional para evitar que el contenido toque los bordes */
+@keyframes starsAnimation {
+  0% {
+    background-position: 0 0; /* Inicia la animación con la posición inicial */
+  }
+  100% {
+    background-position: 100% 0; /* Finaliza la animación con la posición final */
+  }
 }
+
