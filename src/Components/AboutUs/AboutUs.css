@@ -31,22 +31,34 @@
 }
 
 .feature {
-    width: calc(30% - 20px); /* Reduciendo el ancho para dejar espacio entre las tarjetas */
-    padding: 20px;
+    width: calc(50% - 20px); /* Establecer el ancho de las tarjetas para que ocupen el 50% del contenedor */
+    padding: 15px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 20px; /* Añadiendo espacio en la parte inferior de cada tarjeta */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
 .feature h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px; /* Tamaño del título */
+    margin-bottom: 10px; /* Espacio inferior */
 }
 
 .feature p {
-    font-size: 16px;
+    font-size: 14px; /* Tamaño del texto */
 }
 
+@media (max-width: 768px) {
+    .about-features {
+        flex-direction: column; /* Apilar las tarjetas en dispositivos móviles */
+        align-items: center; /* Alinear al centro en dispositivos móviles */
+    }
 
+    .feature {
+        width: calc(100% - 90px); /* Establecer el ancho completo para una tarjeta en dispositivos móviles */
+        margin-bottom: 15px; /* Espacio inferior entre tarjetas en dispositivos móviles */
+    }
+
+    
+}
